@@ -34,7 +34,7 @@ class User {
 
 		if($row['user_closed'] == 'yes')
 			return true;
-		else
+		else 
 			return false;
 	}
 
