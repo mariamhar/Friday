@@ -1,4 +1,3 @@
-
 -- users --
 
 CREATE TABLE `users` (

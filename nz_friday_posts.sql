@@ -1,4 +1,4 @@
--- TABLE posts --
+-- posts --
 
 SET @dte:=CURRENT_DATE();
 SELECT text_id,DATEDIFF(text_created, @dte),@dte:=text_created FROM nz_text ORDER BY text_created;
