@@ -5,6 +5,14 @@
 </head>
 <body>
 
+	<style>
+		* {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 12px;
+			background-color: #eeeeee;
+		}
+	</style>
+
 	<?php
 	require 'config/config.php';
 	include("includes/classes/User.php");
@@ -71,7 +79,7 @@
 
 				// Timeframe
 				$date_time_now = date("Y-m-d H:i:s");
-				$start_date = new DateTime($date_time); //Time of post
+				$start_date = new DateTime($date_added); //Time of post
 				$end_date = new DateTime($date_time_now); //Current time
 				$interval = $start_date->diff($end_date); //Difference between dates
 				if($interval->y >= 1) {
@@ -137,13 +145,25 @@
 
 				$user_obj = new User($con, $posted_by);
 
+				//PHP CLOSE FOR MARKUP BELOW ?>
+
+				<div class="comment_section">
+					<a href="<?php echo $posted_by; ?>" target="_parent"><img src="<?php echo $user_obj->getProfilePic(); ?>" title="<?php echo $posted_by;?>" class="comment_profile_pic"></a>
+					<a href="<?php echo $posted_by; ?>" target="_parent"><b><?php echo $user_obj->getFirstandLastName(); ?></b></a>
+					&nbsp;
+					<?php echo $time_message . "<br/>" . $comment_body; ?>
+					<hr>
+				</div>
+
+				<?php // PHP REOPEN
+
 			}
 		}
-	?>
 
-	<div class="comment_section">
-		<a href="<?php echo $posted_by; ?>">denny_crane</a>
-	</div>
+		else {
+			echo "<div>No Comments to show!</div>";
+		}
+	?>
 
 
 
