@@ -208,7 +208,7 @@ class Post {
 								<div class='newsfeedPostOptions'>
 									<br><br>
 									Comments ($comments_check_num)&nbsp;
-
+									<iframe src='like.php?post_id=$id'></iframe>
 								</div>
 
 							</div>
