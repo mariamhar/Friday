@@ -1,3 +1,5 @@
+-- comments --
+
 SELECT * FROM comments;
 
 SELECT * FROM comments;

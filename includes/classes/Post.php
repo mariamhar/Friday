@@ -106,6 +106,8 @@ class Post {
 					?>
 
 			    <script>
+					// Doesn't work in Firefox
+					
 					function toggle<?php echo $id; ?>() {
 
 						var target = $(event.target);

@@ -1,4 +1,5 @@
--- GETTING STARTED --
+-- test (INITIAL) --
+
 CREATE TABLE test (
 	id INT(11) NOT NULL  COMMENT 'ID for person',
 	name VARCHAR(50) NOT NULL COMMENT 'name of person'
