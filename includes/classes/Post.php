@@ -52,7 +52,7 @@ class Post {
 
 
 		$str = ""; //String to return
-		$data_query = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted='no' ORDER BY id DESC");
+		$data_query = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted='no' ORDER BY date_added DESC");
 
 		if(mysqli_num_rows($data_query) > 0) {
 
@@ -103,6 +103,19 @@ class Post {
 					$last_name = $user_row['last_name'];
 					$profile_pic = $user_row['profile_pic'];
 
+					?>
+
+			    <script>
+			      function toggle<?php echo $id; ?>() {
+			        var element = document.getElementById("toggleComment<?php echo $id; ?>");
+			        if(element.style.display == "block")
+			          element.style.display = "none";
+			        else
+			          element.style.display = "block";
+			      }
+			    </script>
+
+					<?php
 
 					//Timeframe
 					$date_time_now = date("Y-m-d H:i:s");
@@ -168,12 +181,12 @@ class Post {
 						}
 					}
 
-					$str .= "<div class='status_post'>
+					$str .= "<div class='status_post' onClick='javascript:toggle$id()'>
 								<div class='post_profile_pic'>
-									<img src='$profile_pic' width='50'>
+									<img src='$profile_pic'>
 								</div>
 
-								<div class='posted_by' style='color:#ACACAC;'>
+								<div class='posted_by'>
 									<a href='$added_by'> $first_name $last_name </a> $user_to &nbsp;&nbsp;&nbsp;&nbsp;$time_message
 								</div>
 								<div id='post_body'>
@@ -181,6 +194,9 @@ class Post {
 									<br>
 								</div>
 
+							</div>
+							<div class='post_comment' id='toggleComment$id' style='display:none;'>
+								<iframe src='comment_frame.php?post_id=$id' id='comment_iframe' frameborder='0'></iframe>
 							</div>
 							<hr>";
 				}

@@ -1,4 +1,4 @@
-<?php  
+<?php
 require 'config/config.php';
 
 
@@ -15,7 +15,7 @@ else {
 
 <html>
 <head>
-	<title>Welcome to Swirlfeed</title>
+	<title>Welcome to Friday!</title>
 
 	<!-- Javascript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -29,10 +29,10 @@ else {
 </head>
 <body>
 
-	<div class="top_bar"> 
+	<div class="top_bar">
 
 		<div class="logo">
-			<a href="index.php">Swirlfeed!</a>
+			<a href="index.php">Friday!</a>
 		</div>
 
 		<nav>
