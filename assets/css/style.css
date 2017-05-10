@@ -203,9 +203,31 @@ nav a:hover {
   text-shadow: #73b6e2 0.5px 0.5px 0px;
 }
 
-newsfeedPostOptions {
+.newsfeedPostOptions {
   padding: 0px;
   text-decoration: none;
   color: #20aae5;
   border: none;
+}
+
+.newsfeedPostOptions iframe {
+  border: 0;
+  height: 17px;
+  width: 120px;
+}
+
+.comment_like {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  color: #3498db;
+  padding: 0;
+  height: auto;
+  width: auto;
+  margin: 0;
+}
+
+.like_value {
+  display: inline;
+  font-size: 14px;
 }

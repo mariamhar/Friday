@@ -5,6 +5,21 @@
 </head>
 <body>
 
+	<style>
+		* {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		body {
+			background-color: transparent;
+		}
+
+		form {
+		  position: absolute;
+		  top: 0;
+		}
+	</style>
+
 	<?php
 		require 'config/config.php';
 		include("includes/classes/User.php");
