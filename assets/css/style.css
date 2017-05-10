@@ -261,7 +261,7 @@ nav a:hover {
   margin: 7px 0px 0px 7px;
   border: none;
   color: #ffffff;
-} 
+}
 
 .profile_info {
   display:list-item;
@@ -297,4 +297,34 @@ nav a:hover {
 
 .deep-blue {
   background-color: #ff43f0;
+}
+
+#accept_button {
+  background-color: #2ecc71;
+  width:;
+  height:;
+  border-radius:;
+  margin:;
+  vorder:;
+  color:;
+}
+
+#accept_button {
+  background-color: #2ecc71;
+  width: 20%;
+  height: 28px;
+  border-radius: 5px;
+  margin: 5px;
+  border: none;
+  color: #ffffff;
+}
+
+#ignore_button {
+  background-color: #e74c3c;
+  width: 20%;
+  height: 28px;
+  border-radius: 5px;
+  margin: 5px;
+  border: none;
+  color: #ffffff;
 }
