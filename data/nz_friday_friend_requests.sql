@@ -12,3 +12,5 @@ CREATE TABLE friend_requests (
 
 
 SELECT * FROM friend_requests WHERE user_to = '$user_to' AND user_from = '$user_from';
+SELECT * FROM friend_requests;
+TRUNCATE friend_requests;
