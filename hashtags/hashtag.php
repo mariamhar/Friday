@@ -5,12 +5,31 @@ $con = mysqli_connect("localhost","friday","B1@thering!","friday"); // Connectio
 if(mysqli_connect_errno()) {
   echo "Failed to connect: " . mysqli_connect_errno();
 }
-
 	define('MYSQL_QUERY', 'SELECT term_text FROM php_auto_hashtag');
 
 	function at_get_terms() {
 		//retrieve terms from database
 		//returns Boolean false on failure, array of terms on success
+
+		if(!$link = mysqli_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASS)) {
+			trigger_error('function at_get_terms: Cannot connect to database server. Please check your host name and credentials', E_USER_WARNING);
+			return false;
+		}
+
+		if(!mysqli_select_db($link,MYSQL_DB)) {
+			trigger_error('function at_get_terms: Cannot select the database. Please check your database name', E_USER_WARNING);
+			return false;
+		}
+
+		if(!$rs = mysqli_query($link,MYSQL_QUERY)) {
+			trigger_error('function at_get_terms: Error parsing query. MySQL error: ' . mysqli_error(), E_USER_WARNING);
+			return false;
+		}
+
+		if(mysqli_num_rows($rs) == 0) {
+			trigger_error('function at_get_terms: No terms found in database', E_USER_NOTICE);
+			return false;
+		}
 
 		$out = array();
 
