@@ -71,7 +71,7 @@ class Post {
 					$user_to = "";
 				}
 				else {
-					$user_to_obj = new User($con, $row['user_to']);
+					$user_to_obj = new User($this->con, $row['user_to']);
 					$user_to_name = $user_to_obj->getFirstAndLastName();
 					$user_to = "to <a href='" . $row['user_to'] ."'>" . $user_to_name . "</a>";
 				}
@@ -83,7 +83,7 @@ class Post {
 				}
 
 				$user_logged_obj = new User($this->con, $userLoggedIn);
-				if($user_logged_obj->isFriend($added_by)){
+				if($user_logged_obj->isFriend($added_by)) {
 
 					if($num_iterations++ < $start)
 						continue;
