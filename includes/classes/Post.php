@@ -207,7 +207,7 @@ class Post {
 									$delete_button
 								</div>
 								<div id='post_body'>
-									$body
+									($id) $body
 									<br>
 								</div>
 
@@ -228,9 +228,12 @@ class Post {
 							<script>
 
 								$(document).ready(function() {
+
 									$('#post<?php echo $id; ?>').on('click', function(result){
+
 										bootbox.confirm("Are you sure want to delete this post?", function(result) {
-											$.post("includes/form_handlers/delete.php?post_id=<?php echo $id; ?>", {result:result});
+
+											$.post("includes/form_handlers/delete_post.php?post_id=<?php echo $id; ?>", {result:result});
 
 											if(result)
 												location.reload();
