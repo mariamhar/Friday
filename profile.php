@@ -74,8 +74,9 @@
 
     </div>
 
-    <div class="main_column column">
-      <?php echo $username; ?>
+    <div class="profile_main_column column">
+      <div class="posts_area"></div>
+      <img id="loading" src="assets/images/icons/loading.gif">
 
       <!-- Modal -->
       <div class="modal fade" id="post_form" tabindex="-1" role="dialog" aria-labelledby="post_modal_label">
