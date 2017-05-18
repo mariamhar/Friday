@@ -115,7 +115,7 @@ class User {
 
 		foreach($user_array_explode as $i) {
 
-			echo $i;
+			// echo $i;
 
 			foreach($user_to_check_array_explode as $j) {
 
