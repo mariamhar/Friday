@@ -24,7 +24,11 @@ SELECT * FROM posts WHERE added_by ='';
 SELECT * FROM posts WHERE user_to ='';
 
 SELECT * FROM posts WHERE deleted = 'no' ORDER BY id DESC;
-SELECT * FROM posts;
+SELECT * FROM posts WHERE added_by = 'al_nolan';
+SELECT * FROM posts WHERE id = 100857;
+UPDATE posts SET deleted = 'yes' WHERE id = 100859;
+UPDATE posts SET deleted = 'no' WHERE id = 100880;
+
 
 SELECT *
 	FROM posts

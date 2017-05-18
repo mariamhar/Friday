@@ -276,7 +276,7 @@ class Post {
 
 
 		$str = ""; //String to return
-		$data_query = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted='no' AND (added_by = '$profileUsername' AND user_to = 'none') ORDER BY date_added DESC");
+		$data_query = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted='no' AND ((added_by = '$profileUsername' AND user_to = 'none') OR user_to = '$profileUsername') ORDER BY id DESC");
 
 		if(mysqli_num_rows($data_query) > 0) {
 
@@ -289,25 +289,6 @@ class Post {
 				$body = $row['body'];
 				$added_by = $row['added_by'];
 				$date_time = $row['date_added'];
-
-				//Prepare user_to string so it can be included even if not posted to a user
-				if($row['user_to'] == "none") {
-					$user_to = "";
-				}
-				else {
-					$user_to_obj = new User($this->con, $row['user_to']);
-					$user_to_name = $user_to_obj->getFirstAndLastName();
-					$user_to = "to <a href='" . $row['user_to'] ."'>" . $user_to_name . "</a>";
-				}
-
-				//Check if user who posted, has their account closed
-				$added_by_obj = new User($this->con, $added_by);
-				if($added_by_obj->isClosed()) {
-					continue;
-				}
-
-				$user_logged_obj = new User($this->con, $userLoggedIn);
-				if($user_logged_obj->isFriend($added_by)) {
 
 					if($num_iterations++ < $start)
 						continue;
@@ -468,8 +449,6 @@ class Post {
 							</script>
 
 							<?php
-
-				}
 
 			} //End while loop
 
