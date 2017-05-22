@@ -23,6 +23,24 @@ SELECT email FROM users WHERE email = 'thisisal@gmail.com';
 INSERT INTO users VALUES (NULL,'Al','Nolan','al_nolan','thisisal@gmail.com','Passw0rd','2017-04-30','assets/images/profiles/al_nolan.jpg','1','1','no','');
 INSERT INTO users VALUES (NULL,'Adolphus','Nolan','adolphus_nolan','adolphusnolan@gmail.com','Passw0rd','2017-04-30','assets/images/profiles/al_nolan.jpg','1','1','no','');
 INSERT INTO users VALUES (NULL, 'Alfonzo', 'Logan', 'alfonzo_logan', 'alfonzologan@gmail.com', 'Passw0rd!', '2017-04-30', 'assets/images/profiles/al_nolan.jpg', '1', '1', 'no', ',');
+
+INSERT INTO users	(id,	first_name,	last_name,	username,		email,				password,							signup_date,	profile_pic,							num_posts,	num_likes,	user_closed,	friend_array,	location)
+VALUES 				('84',	'Sean',		'Spicer',	'sean_spicer',	'spicy@gmail.com',	'd41e98d1eafa6d6011d3a70f1a5b92f0',	'2017-05-19',	'assets/images/profile_pics/yo.jpg',	'0',		'0',		'no',			',',			'DC');
+
+INSERT INTO users	(id,	first_name,	last_name,	username,		email,				password,							signup_date,	profile_pic,							num_posts,	num_likes,	user_closed,	friend_array,	location)
+VALUES 				('85',	'Marty',		'McFly',	'slacker',	'mf@hillside.com',	'd41e98d1eafa6d6011d3a70f1a5b92f0',	'1985-12-15',	'assets/images/profile_pics/McFLY.jpg',	'0',		'0',		'no',			',',			'Hillside, California');
+
+INSERT INTO users	(id,	first_name,		last_name,	username,		email,						password,							signup_date,	profile_pic,							num_posts,	num_likes,	user_closed,	friend_array,	location)
+VALUES 				(NULL,	'Geoff',		'Cooke',	'geoff_cooke',	'gcooke@resumeedge.com',	'd41e98d1eafa6d6011d3a70f1a5b92f0',	'2017-05-19',	'assets/images/profile_pics/cookey.jpg',	'0',		'0',		'no',			',',			NULL);
+
+
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+  
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID for user', AUTO_INCREMENT=16;COMMIT;
+
+
 INSERT INTO users (id,first_name,last_name,username,email,password,signup_date,profile_pic,num_posts,num_likes,user_closed,friend_array,location) VALUES
 ('83003','JW','Williams','jwwiii','jwwashingtoniii@yahoo.com','$2y$10$9V70ngDO8GbkteYF3t92UefrTFTGcy/o0PiacVCQKONj5SkIDd4z2','2017-04-27','assets/images/profile_pics/defaults/head_deep_blue.png','0','0','no',',','Dallas'),
 ('83004','Larry','Mullins','lmullins','rentrabar@hotmail.com','$2y$10$pUNu6NkDl2ykwy3uCxmEc.n1NbbozIhnejRhPcnyaUsUMZnnxWaZq','2017-04-27','assets/images/profile_pics/defaults/head_emerald.png','0','0','no',',',NULL),

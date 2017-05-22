@@ -10,7 +10,26 @@ class Message {
 		$this->user_obj = new User($con, $user);
 	}
 
+  public function getMostRecentUser() {
+    $userLoggedIn = $this->user_obj->getUsername();
 
+    $query = mysqli_query($this->con, "SELECT user_to, user_from FROM messages WHERE users_to = '$userLoggedIn' OR user_from = '$userLoggedIn' ORDER BY id DESC LIMIT 1");
+
+    if($user_to == false) {
+      $user_to = 'new';
+    }
+
+    $row = mysqli_fetch_array($query);
+    $user_to = $row['user_to'];
+    $user_from = $row['user_from'];
+
+    if($user_to != $userLoggedIn) {
+      return $user_to;
+    }
+    else {
+      return $user_from;
+    }
+  }
 
 }
 
