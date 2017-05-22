@@ -24,4 +24,10 @@ CREATE TABLE IF NOT EXISTS `messages` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
+
+SELECT * FROM messages;
+INSERT INTO messages VALUES (NULL, 'vicky_jeudy', 'al_nolan', 'Hey, stranger...','2017-05-19', 'no', 'no', 'no');
+INSERT INTO messages VALUES (NULL, 'al_nolan', 'vicky_jeudy', 'Hey, yourself!','2017-05-19', 'no', 'no', 'no');
+INSERT INTO messages VALUES (NULL, 'al_nolan', 'vicky_jeudy', 'Hey, yourself!','2017-05-19', 'no', 'no', 'no');
+
 SELECT user_to, user_from FROM messages WHERE user_to = 'al_nolan' OR user_from = 'al_nolan' ORDER BY id DESC LIMIT 1;

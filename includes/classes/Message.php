@@ -31,6 +31,15 @@
       }
     }
 
+    public function sendMessage($user_to, $body, $date) {
+
+      if($body != "") {
+        $userLoggedIn = $this->user_obj->getUsername();
+        $query = mysqli_query($this->con, "INSERT INTO messages VALUES (NULL, '$user_to', '$userLoggedIn', '$body','$date', 'no', 'no', 'no')");
+        // $query = mysqli_query($this->con, "INSERT INTO messages VALUES (NULL, 'vicky_jeudy', 'al_nolan', 'TEST','2017-05-19', 'no', 'no', 'no')");
+      }
+    }
+
   }
 
 ?>
