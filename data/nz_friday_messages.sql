@@ -24,4 +24,4 @@ CREATE TABLE IF NOT EXISTS `messages` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
-nz_friday_messages.sql
+SELECT user_to, user_from FROM messages WHERE user_to = 'al_nolan' OR user_from = 'al_nolan' ORDER BY id DESC LIMIT 1;
