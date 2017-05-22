@@ -349,3 +349,23 @@ nav a:hover {
   right: -15px;
   position: relative;
 }
+
+#message_textarea {
+  width: 80%;
+  margin-right: 8px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d3;
+  font-size: 12px;
+}
+
+#message_submit {
+  height: 41px;
+  width: 120px;
+  margin: 0;
+  position: absolute;
+  border: none;
+  background-color: #20aae5;
+  color: #156588;
+  border-radius: 5px;
+  text-shadow: #73b6e2 0.5px 0.5px 0px;
+}
