@@ -6,3 +6,22 @@ CREATE TABLE IF NOT EXISTS `messages` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+SELECT * FROM messages;
+TRUNCATE messages;
+DROP TABLE IF EXISTS messages;
+
+CREATE TABLE IF NOT EXISTS `messages` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_to` VARCHAR(50),
+  `user_from` VARCHAR(50),
+  `body` TEXT,
+  `date` DATETIME,
+  `opened` VARCHAR(3),
+  `viewed` VARCHAR(3),
+  `delete` VARCHAR(3),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+nz_friday_messages.sql
