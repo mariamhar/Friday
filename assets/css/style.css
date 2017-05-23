@@ -378,6 +378,11 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
+.loaded_conversations {
+  max-height: 216px;
+  overflow: scroll;
+}
+
 .message {
   border: 1px solid #000000;
   padding: 5px 10px 5px 10px;
@@ -400,9 +405,22 @@ nav a:hover {
   margin-bottom: 5px;
 }
 
+.user_found_messages {
+  border-bottom: 1px solid #d3d3d3;
+  padding: 8px 8px 10px 8px;
+}
+
+.user_found_messages:hover {
+  background-color: #f3f3f3;
+}
+
 .user_found_messages img {
   border-radius: 5px;
-  margin-right: 5px;
-  width: 81px;
-  height: 81px;
+  float: left;
+  width: 35px;
+  height: 35px;
+}
+
+#grey {
+  color: #a3a3a3;
 }
