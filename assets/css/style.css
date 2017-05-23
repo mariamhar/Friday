@@ -399,3 +399,10 @@ nav a:hover {
   float: left;
   margin-bottom: 5px;
 }
+
+.user_found_messages img {
+  border-radius: 5px;
+  margin-right: 5px;
+  width: 81px;
+  height: 81px;
+}
