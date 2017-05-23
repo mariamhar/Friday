@@ -11,6 +11,23 @@ SELECT * FROM messages;
 TRUNCATE messages;
 DROP TABLE IF EXISTS messages;
 
+SELECT *
+	FROM users
+	WHERE
+		(first_name LIKE '%crai%'
+			AND last_name LIKE '%mac%')
+		AND user_closed = 'no' LIMIT 8;
+		
+SELECT *
+	FROM users
+	WHERE
+		(first_name LIKE '%c%'
+			OR last_name LIKE '%c%')
+		AND user_closed = 'no' LIMIT 8;
+		
+SELECT * FROM users WHERE username LIKE 'cra%' AND user_closed = 'no' LIMIT 8;
+
+
 CREATE TABLE IF NOT EXISTS `messages` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `user_to` VARCHAR(50),

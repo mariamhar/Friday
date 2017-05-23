@@ -424,3 +424,14 @@ nav a:hover {
 #grey {
   color: #a3a3a3;
 }
+
+.resultDisplay a {
+  color: #000000;
+}
+
+.liveSearchProfilePic img {
+  border-radius: 5px;
+  float: left;
+  width: 70px;
+  height: 70px;
+}
