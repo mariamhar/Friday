@@ -45,7 +45,7 @@ require 'includes/form_handlers/login_handler.php';
 			<div id="first">
 
 				<form action="register.php" method="POST">
-					<input type="email" name="log_email" placeholder="Email Address" value="<?php
+					<input type="email" name="log_email" placeholder="Email Address" autocomplete="off" value="<?php
 					if(isset($_SESSION['log_email'])) {
 						echo $_SESSION['log_email'];
 					}
