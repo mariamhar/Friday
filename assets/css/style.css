@@ -97,7 +97,7 @@ nav a:hover {
   float: right;
   width: 70%;
   z-index: -1;
-  min-height: 160px;
+  min-height: 170px;
 }
 
 .profile_main_column {
@@ -425,13 +425,39 @@ nav a:hover {
   color: #a3a3a3;
 }
 
+.resultDisplay {
+  padding: 5px 5px 0px 5px;
+  height: 60px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
 .resultDisplay a {
-  color: #000000;
+  float: none;
+}
+
+.resultDisplay:hover {
+  background-color: #ebebeb;
+  text-decoration: none;
 }
 
 .liveSearchProfilePic img {
-  border-radius: 5px;
+  border-radius: 25px;
   float: left;
-  width: 70px;
-  height: 70px;
+  margin: 1px 12px 0px 2px;
+  width: 50px;
+  height: 50px;
+}
+
+.liveSearchText {
+  background-color: transparent;
+  color: #1e96ca;
+}
+
+.liveSearchText p {
+  margin: 0px 0px 0px 10px;
+  font-size: 12px;
+}
+
+.liveSearchText .username {
+  margin: 0px 0px 0px 0px;
 }
