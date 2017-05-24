@@ -8,6 +8,8 @@ CREATE TABLE IF NOT EXISTS `messages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 SELECT * FROM messages;
+SELECT opened FROM messages WHERE user_to = 'al_nolan' AND user_from = 'al_nolan' ORDER BY id DESC;
+
 TRUNCATE messages;
 DROP TABLE IF EXISTS messages;
 

@@ -227,7 +227,7 @@
           $count++;
         }
 
-        $is_unread_query = mysqli_query($this->con, "SELECT opened from messages WHERE user_to = '$userLoggedIn' AND user_from '$username' ORDER BY id DESC");
+        $is_unread_query = mysqli_query($this->con, "SELECT opened from messages WHERE user_to = '$userLoggedIn' AND user_from = '$username' ORDER BY id DESC");
         $row = mysqli_fetch_array($is_unread_query);
 
         $style = ($row['opened'] == 'no') ? "background-color:#ddedff;" : "";
@@ -252,7 +252,7 @@
       }
 
       // If posts were loaded
-      if(count > $limit) {
+      if($count > $limit) {
         $return_string .= "<input type='hidden' class='nextPageDropDownData' value='" . ($page + 1) . "'>";
       }
       else {
@@ -262,6 +262,12 @@
 
       return $return_string;
 
+    }
+
+    public function getUnreadNumber() {
+      $userLoggedIn = $this->user_obj->getUsername();
+      $query = mysqli_query($this->con, "SELECT * FROM messages WHERE viewed='no' AND user_to='$userLoggedIn'");
+      return mysqli_num_rows($query);
     }
 
   }
