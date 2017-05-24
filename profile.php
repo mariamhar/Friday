@@ -87,7 +87,25 @@
     </div>
 
     <div class="profile_main_column column">
-      <div class="posts_area"></div>
+
+      <ul class="nav nav-tabs" role="tablist" id="profileTabs">
+        <li role="presentation" class="active"><a href="#newsfeed_div" aria-controls="newsfeed_div" role="tab" data-toggle="tab">Newsfeed</a></li>
+        <li role="presentation"><a href="#about_div" aria-controls="about_div" role="tab" data-toggle="tab">About</a></li>
+        <li role="presentation"><a href="#messages_div" aria-controls="messages_div" role="tab" data-toggle="tab">Messages</a></li>
+      </ul>
+
+      <div class="tab_content">
+        <div role="tabpanel" class="tab-pane fade in active" id="newsfeed_div">
+            <div class="posts_area"></div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="about_div">
+
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="messages_div">
+            
+        </div>
+      </div>
+
       <img id="loading" src="assets/images/icons/loading.gif">
 
       <!-- Modal -->
