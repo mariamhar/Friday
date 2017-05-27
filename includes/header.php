@@ -60,6 +60,9 @@ else {
 			<a href="requests.php">
 				<i class="fa fa-users fa-lg"></i>
 			</a>
+			<a href="upload.php">
+				<i class="fa fa-upload fa-lg"></i>
+			</a>
 			<!--//
 			<a href="#">
 				<i class="fa fa-cog fa-lg"></i>
@@ -73,7 +76,7 @@ else {
 
 		</nav>
 
-		<div class="dropdown_data_window" style="height:0px;"></div>
+		<div class="dropdown_data_window" style="height:0px; border:none;"></div>
 		<input type="hidden" id="dropdown_data_type" value="">
 
 	</div>

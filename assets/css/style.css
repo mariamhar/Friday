@@ -465,3 +465,17 @@ nav a:hover {
 .tab-content {
   margin: 25px 0px 0px 0px;
 }
+
+.dropdown_data_window {
+  height: 280px;
+  padding: 0px;
+  background-color: #ffffff;
+  border: 1px solid #dadada;
+  width: 300px;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  overflow: scroll;
+  border-radius: 0px 0px 8px 8px;
+  border-top: none;
+}
