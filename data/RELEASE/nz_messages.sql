@@ -1,0 +1,66 @@
+CREATE TABLE `messages` (
+  `id` int(11) NOT NULL,
+  `user_to` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `user_from` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `body` text COLLATE utf8_unicode_ci,
+  `date` datetime DEFAULT NULL,
+  `opened` varchar(3) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `viewed` varchar(3) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `deleted` varchar(3) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
+
+ALTER TABLE `messages`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+
+INSERT INTO `messages` (`id`, `user_to`, `user_from`, `body`, `date`, `opened`, `viewed`, `deleted`) VALUES
+(3, 'al_nolan', 'vicky_jeudy', 'Want to try (us) again?', '2017-05-22 14:41:47', 'no', 'yes', 'no'),
+(4, 'al_nolan', 'vicky_jeudy', 'You don&#39; have to answer now... just... answer.', '2017-05-22 14:41:50', 'no', 'yes', 'no'),
+(5, 'vicky_jeudy', 'al_nolan', 'You know where my head is.', '2017-05-22 14:41:52', 'no', 'no', 'no'),
+(6, 'al_nolan', 'vicky_jeudy', 'I do.', '2017-05-22 14:41:54', 'no', 'yes', 'no'),
+(7, 'vicky_jeudy', 'al_nolan', 'Then...', '2017-05-22 14:41:57', 'no', 'no', 'no'),
+(8, 'vicky_jeudy', 'denny_crane', 'Mmm mmm mmm', '2017-05-22 14:41:59', 'no', 'no', 'no'),
+(9, 'denny_crane', 'vicky_jeudy', '...ick...', '2017-05-22 14:42:02', 'no', 'no', 'no'),
+(10, 'vicky_jeudy', 'denny_crane', 'Ick is right... I&#39;m quite nasty.', '2017-05-22 14:42:04', 'no', 'no', 'no'),
+(11, 'charlize_theron', 'vicky_jeudy', 'You know who just hit my up, right??', '2017-05-22 14:42:06', 'no', 'no', 'no'),
+(12, 'vicky_jeudy', 'charlize_theron', 'No...', '2017-05-22 14:42:09', 'no', 'no', 'no'),
+(13, 'vicky_jeudy', 'charlize_theron', 'Wait, NO!?!?', '2017-05-22 14:42:11', 'no', 'no', 'no'),
+(14, 'charlize_theron', 'vicky_jeudy', '*sad face*', '2017-05-22 14:42:14', 'no', 'no', 'no'),
+(15, 'charlize_theron', 'vicky_jeudy', 'This can&#39;t go well.', '2017-05-22 14:42:17', 'no', 'no', 'no'),
+(16, 'al_nolan', 'vicky_jeudy', 'Then I don&#39;t know what to say.', '2017-05-22 14:45:34', 'no', 'yes', 'no'),
+(17, 'al_nolan', 'vicky_jeudy', 'I mean, this may be it for us.', '2017-05-22 14:45:47', 'no', 'yes', 'no'),
+(18, 'al_nolan', 'vicky_jeudy', 'And you&#39;re missing out.', '2017-05-22 14:45:53', 'no', 'yes', 'no'),
+(19, 'al_nolan', 'vicky_jeudy', 'Are you still there?', '2017-05-22 14:49:36', 'no', 'yes', 'no'),
+(20, 'al_nolan', 'vicky_jeudy', 'Al?', '2017-05-22 14:49:46', 'no', 'yes', 'no'),
+(21, 'al_nolan', 'vicky_jeudy', 'My script isn&#39;t loading at the bottom.', '2017-05-22 14:51:02', 'no', 'yes', 'no'),
+(22, 'al_nolan', 'vicky_jeudy', 'It&#39;s loading at the top. Well, it&#39;s loading at the bottom but it shows me the top when the page reloads.', '2017-05-22 14:51:32', 'no', 'yes', 'no'),
+(23, 'al_nolan', 'vicky_jeudy', 'We&#39;ll give this an ID.', '2017-05-22 14:52:19', 'no', 'yes', 'no'),
+(24, 'al_nolan', 'vicky_jeudy', 'Nice!', '2017-05-22 14:52:25', 'no', 'yes', 'no'),
+(25, 'vicky_jeudy', 'denny_crane', 'Still there...', '2017-05-22 14:52:55', 'no', 'no', 'no'),
+(26, 'denny_crane', 'vicky_jeudy', 'Bro, you straight disrespecting the game right now.', '2017-05-22 14:53:34', 'no', 'no', 'no'),
+(27, 'vicky_jeudy', 'denny_crane', 'fr fr?', '2017-05-22 14:53:42', 'no', 'no', 'no'),
+(83, 'al_nolan', 'vicky_jeudy', 'Hey, stranger...', '2017-05-22 14:41:41', 'no', 'yes', 'no'),
+(84, 'vicky_jeudy', 'al_nolan', 'Well, well, well...', '2017-05-22 14:41:44', 'no', 'no', 'no'),
+(85, 'al_nolan', 'vicky_jeudy', 'Testing 123', '2017-05-24 17:21:02', 'no', 'yes', 'no'),
+(86, 'vicky_jeudy', 'al_nolan', 'Testing 123', '2017-05-24 17:21:02', 'no', 'no', 'no'),
+(87, 'al_nolan', 'vicky_jeudy', 'Testing 123', '2017-05-24 17:21:02', 'no', 'yes', 'no'),
+(88, 'al_nolan', 'vicky_jeudy', 'Testing 123', '2017-05-24 17:21:02', 'no', 'yes', 'no'),
+(89, 'vicky_jeudy', 'al_nolan', 'Testing 123', '2017-05-24 17:21:02', 'no', 'no', 'no'),
+(90, 'al_nolan', 'vicky_jeudy', 'Testing 123', '2017-05-24 17:21:02', 'no', 'yes', 'no'),
+(91, 'vicky_jeudy', 'al_nolan', 'Testing 123', '2017-05-24 17:21:02', 'no', 'no', 'no'),
+(92, 'vicky_jeudy', 'denny_crane', 'Testing 123', '2017-05-24 17:21:02', 'no', 'no', 'no'),
+(93, 'denny_crane', 'vicky_jeudy', 'Testing 123', '2017-05-24 17:21:02', 'no', 'no', 'no'),
+(94, 'vicky_jeudy', 'denny_crane', 'Testing 123', '2017-05-24 17:21:02', 'no', 'no', 'no'),
+(95, 'charlize_theron', 'vicky_jeudy', 'Testing 123', '2017-05-24 17:21:02', 'no', 'no', 'no'),
+(96, 'vicky_jeudy', 'charlize_theron', 'Testing 123', '2017-05-24 17:21:02', 'no', 'no', 'no'),
+(97, 'vicky_jeudy', 'charlize_theron', 'Testing 123', '2017-05-24 17:21:02', 'no', 'no', 'no'),
+(98, 'charlize_theron', 'vicky_jeudy', 'Testing 123', '2017-05-24 17:21:02', 'no', 'no', 'no'),
+(99, 'charlize_theron', 'vicky_jeudy', 'Testing 123', '2017-05-24 17:21:02', 'no', 'no', 'no'),
+(100, 'charlize_theron', 'al_nolan', 'Chuck!?!', '2017-05-24 17:21:28', 'no', 'no', 'no'),
+(101, 'denny_crane', 'al_nolan', 'Bruh?', '2017-05-24 17:21:39', 'no', 'no', 'no'),
+(102, 'clark_kent', 'al_nolan', 'Up, up & away lookin&#39; ass...', '2017-05-24 17:21:56', 'no', 'no', 'no'),
+(103, 'craig_mack', 'al_nolan', 'What&#39;s good!?!', '2017-05-24 17:22:19', 'no', 'no', 'no'),
+(104, 'sean_spicer', 'al_nolan', 'Womp...', '2017-05-24 17:23:28', 'no', 'no', 'no');

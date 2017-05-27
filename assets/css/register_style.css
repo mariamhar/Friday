@@ -1,10 +1,10 @@
 @font-face {
-	font-family: 'Bellota-LightItalic';
-	src: url('../fonts/Bellota-LightItalic.otf');
+	font-family: 'Montserrat-LightItalic';
+	src: url('../fonts/Montserrat-LightItalic.otf');
 }
 @font-face {
-	font-family: 'Bellota-BoldItalic';
-	src: url('../fonts/Bellota-BoldItalic.otf');
+	font-family: 'Montserrat-BoldItalic';
+	src: url('../fonts/Montserrat-BoldItalic.otf');
 }
 
 html, body {
@@ -36,7 +36,7 @@ a {
 }
 
 .login_box {
-	font-family: 'Bellota-LightItalic', sans-serif;
+	font-family: 'Montserrat-LightItalic', sans-serif;
 	position: relative;
 	margin-right: auto;
 	margin-left: auto;
@@ -50,7 +50,7 @@ a {
 }
 
 .login_header {
-	font-family: 'Bellota-LightItalic', sans-serif;
+	font-family: 'Montserrat-LightItalic', sans-serif;
 	width: 100%;
 	height: 90px;
 	background-color: #3498db;
@@ -61,7 +61,7 @@ a {
 }
 
 .login_header h1 {
-	font-family: 'Bellota-BoldItalic', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	margin-top: 0;
 	margin-bottom: 0;
 	color: #2C6C96;
@@ -77,7 +77,7 @@ input[type="submit"] {
 	padding: 5px 10px 5px 10px;
 	color: #2C6C96;
 	text-shadow: #73B6E2 0.5px 0.5px 0px;
-	font-family: 'Bellota-BoldItalic', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 100%;
 }
 
@@ -97,7 +97,3 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
 #second {
 	display: none;
 }
-
-
-
-

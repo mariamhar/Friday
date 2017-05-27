@@ -52,15 +52,19 @@ else {
 			<a href="javascript:void(0);" onClick="getDropdownData('<?php echo $userLoggedIn; ?>', 'message')">
 				<i class="fa fa-envelope fa-lg"></i>
 			</a>
+			<!--//
 			<a href="#">
 				<i class="fa fa-bell fa-lg"></i>
 			</a>
+			//-->
 			<a href="requests.php">
 				<i class="fa fa-users fa-lg"></i>
 			</a>
+			<!--//
 			<a href="#">
 				<i class="fa fa-cog fa-lg"></i>
 			</a>
+			//-->
 			<a href="includes/handlers/logout.php">
 				<i class="fa fa-sign-out fa-lg"></i>
 			</a>
@@ -69,7 +73,7 @@ else {
 
 		</nav>
 
-		<div class="dropdown_data_window"></div>
+		<div class="dropdown_data_window" style="height:0px;"></div>
 		<input type="hidden" id="dropdown_data_type" value="">
 
 	</div>
