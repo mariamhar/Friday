@@ -480,3 +480,19 @@ nav a:hover {
   border-radius: 0px 0px 8px 8px;
   border-top: none;
 }
+
+.notification_badge {
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #ff0000;
+  border-radius: 10px;
+  position: absolute;
+  left: 5px;
+  top: -5px;
+}
