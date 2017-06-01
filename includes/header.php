@@ -46,9 +46,15 @@ else {
 		<nav>
 
 			<?php
+
 				// unread messages
 				$messages = new Message($con, $userLoggedIn);
 				$num_messages = $messages->getUnreadNumber();
+
+				// unread notifications
+				$notifications = new Notification($con, $userLoggedIn);
+				$num_notifications = $notifications->getUnreadNumber();
+
 			 ?>
 
 			<a href="<?php echo $userLoggedIn; ?>">
@@ -59,6 +65,7 @@ else {
 			</a>
 			<a href="javascript:void(0);" onClick="getDropdownData('<?php echo $userLoggedIn; ?>', 'message')">
 				<i class="fa fa-envelope fa-lg"></i>
+
 				<?php
 
 					//
@@ -67,12 +74,21 @@ else {
 					}
 
 				?>
+
 			</a>
-			<!--//
-			<a href="#">
+			<a href="javascript:void(0);" onClick="getDropdownData('<?php echo $userLoggedIn; ?>', 'notification')">
 				<i class="fa fa-bell fa-lg"></i>
+
+				<?php
+
+					//
+					if ($num_notifications > 0) {
+						echo '<span class="notification_badge" id="unread_notifications">' . $num_notifications . '</span>';
+					}
+
+				?>
+
 			</a>
-			//-->
 			<a href="requests.php">
 				<i class="fa fa-users fa-lg"></i>
 			</a>

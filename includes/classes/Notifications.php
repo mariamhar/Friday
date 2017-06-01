@@ -14,6 +14,8 @@
       $userLoggedIn = $this->user_obj->getUsername();
       $query = mysqli_query($this->con, "SELECT * FROM notifications WHERE viewed='no' AND user_to='$userLoggedIn'");
       return mysqli_num_rows($query);
+    }
+
   }
 
 ?>
