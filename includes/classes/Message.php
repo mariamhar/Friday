@@ -195,7 +195,7 @@
         $start = 0;
       }
       else {
-        $start = ($page - 1) * limit;
+        $start = ($page - 1) * $limit;
       }
 
       $set_viewed_query = mysqli_query($this->con, "UPDATE messages SET viewed = 'yes' WHERE user_to = '$userLoggedIn'");
@@ -253,10 +253,11 @@
 
       // If posts were loaded
       if($count > $limit) {
-        $return_string .= "<input type='hidden' class='nextPageDropDownData' value='" . ($page + 1) . "'>";
+        $return_string .= "<input type='hidden' class='nextPageDropdownData' value='" . ($page + 1) . "'>";
+        $return_string .= "<input type='hidden' class='noMoreDropdownData' value='false'>";
       }
       else {
-        $return_string .= "<input type='hidden' class='noMoreDropDownData' value='false'>";
+        $return_string .= "<input type='hidden' class='noMoreDropdownData' value='true'>";
         $return_string .= "<p style='text-align: center'>No more messages to load!</p>";
       }
 

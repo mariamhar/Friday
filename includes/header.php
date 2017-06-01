@@ -87,10 +87,10 @@ else {
 
 		$(document).ready(function() {
 
-			$(window).scroll(function() {
+			$('.dropdown_data_window').scroll(function() {
 				var inner_height = $('.dropdown_data_window').innerHeight(); //Div containing data
 				var scroll_top = $('.dropdown_data_window').scrollTop();
-				var page = $('.dropdown_data_window').find('.nextPageDropDownData').val();
+				var page = $('.dropdown_data_window').find('.nextPageDropdownData').val();
 				var noMoreData = $('.dropdown_data_window').find('.noMoreDropDownData').val();
 
 				if ((scroll_top + innerHeight >= $('.dropdown_data_window')[0].scrollHeight) && noMoreData == 'false') {
@@ -106,15 +106,16 @@ else {
 					}
 
 					var ajaxReq = $.ajax({
-						url: "includes/handlers/ajax_load_posts.php",
+						url: "includes/handlers/" + pageName,
 						type: "POST",
 						data: "page=" + page + "&userLoggedIn=" + userLoggedIn,
 						cache:false,
+
 						success: function(response) {
-							$('.posts_area').find('.nextPage').remove(); //Removes current .nextpage
-							$('.posts_area').find('.noMorePosts').remove(); //Removes current .nextpage
-							$('#loading').hide();
-							$('.posts_area').append(response);
+							$('.dropdown_data_window').find('.nextPageDropdownData').remove(); //Removes current .nextpage
+							$('.dropdown_data_window').find('.noMoreDropDownData').remove(); //Removes current .nextpage
+
+							$('.dropdown_data_window').append(response);
 						}
 					});
 				} //End if
