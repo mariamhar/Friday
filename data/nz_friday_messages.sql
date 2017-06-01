@@ -9,6 +9,11 @@ CREATE TABLE IF NOT EXISTS `messages` (
 
 SELECT * FROM messages;
 SELECT opened FROM messages WHERE user_to = 'al_nolan' AND user_from = 'al_nolan' ORDER BY id DESC;
+SELECT * FROM messages WHERE viewed = 'no' AND user_to = 'vicky_jeudy';
+SELECT * FROM messages WHERE user_to = 'al_nolan';
+SELECT * FROM messages WHERE user_to = 'vicky_jeudy';
+
+
 
 TRUNCATE messages;
 DROP TABLE IF EXISTS messages;
