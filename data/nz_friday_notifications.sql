@@ -11,13 +11,38 @@ CREATE TABLE IF NOT EXISTS `notifications` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+/* $insert_query = mysqli_query($this->con, "INSERT INTO notifications VALUES ('','$user_to','$userLoggedIn', '$message', '$link', '$date_time', 'no' ,'no')");
+ * 
+ */
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+
+SET @user_to = 'vicky_jeudy';
+SET @userLoggedIn = 'al_nolan';
+SET @message = 'test';
+SET @link = 100909;
+SET @date_time = NOW();
+
+SELECT @user_to;
+SELECT @userLoggedIn;
+SELECT @message;
+SELECT @link;
+SELECT @date_time;
+
+SELECT * FROM posts;
+SELECT * FROM notifications;
+
+INSERT INTO notifications VALUES (NULL,@user_to,@userLoggedIn, @message, @link, @date_time, 'no' ,'no');
+INSERT INTO notifications VALUES (NULL,'vicky_jeudy','al_nolan', 'yo', 100909, NOW(), 'no' ,'no');
+
+
 SELECT * FROM notifications;
 SELECT opened FROM notifications WHERE user_to = 'al_nolan' AND user_from = 'al_nolan' ORDER BY id DESC;
 SELECT * FROM notifications WHERE viewed = 'no' AND user_to = 'vicky_jeudy';
 SELECT * FROM notifications WHERE user_to = 'al_nolan';
 SELECT * FROM notifications WHERE user_to = 'vicky_jeudy';
 
-
+/*  */
 
 TRUNCATE notifications;
 DROP TABLE IF EXISTS notifications;
@@ -39,18 +64,6 @@ SELECT *
 SELECT * FROM users WHERE username LIKE 'cra%' AND user_closed = 'no' LIMIT 8;
 
 
-CREATE TABLE IF NOT EXISTS `notifications` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `user_to` VARCHAR(50),
-  `user_from` VARCHAR(50),
-  `body` TEXT,
-  `date` DATETIME,
-  `opened` VARCHAR(3),
-  `viewed` VARCHAR(3),
-  `delete` VARCHAR(3),
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 UPDATE notifications SET opened = 'no';
 UPDATE notifications SET viewed = 'no';
