@@ -17,10 +17,10 @@ CREATE TABLE IF NOT EXISTS `notifications` (
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 
-SET @user_to = 'vicky_jeudy';
+SET @user_to = 'none';
 SET @userLoggedIn = 'al_nolan';
-SET @message = 'test';
-SET @link = 100909;
+SET @message = 'Wrestle deez nuts...';
+SET @link = 100924;
 SET @date_time = NOW();
 
 SELECT @user_to;
@@ -29,7 +29,9 @@ SELECT @message;
 SELECT @link;
 SELECT @date_time;
 
+SELECT * FROM posts WHERE id = 100922;
 SELECT * FROM posts;
+
 SELECT * FROM notifications;
 
 INSERT INTO notifications VALUES (NULL,@user_to,@userLoggedIn, @message, @link, @date_time, 'no' ,'no');

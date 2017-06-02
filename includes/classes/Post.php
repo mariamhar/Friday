@@ -37,7 +37,7 @@ class Post {
 
 				$notification = new Notification($this->con, $userLoggedIn);
 				$notification->insertNotification($returned_id, $user_to, "profile_post");
-	
+
 			}
 
 			//Update post count for user

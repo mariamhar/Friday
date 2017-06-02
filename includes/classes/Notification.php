@@ -12,7 +12,7 @@
 
     public function getUnreadNumber() {
       $userLoggedIn = $this->user_obj->getUsername();
-      $query = mysqli_query($this->con, "SELECT * FROM notifications WHERE viewed='no' AND user_to='$userLoggedIn'");
+      $query = mysqli_query($this->con, "SELECT * FROM notifications WHERE viewed = 'no' AND user_to='$userLoggedIn'");
       return mysqli_num_rows($query);
     }
 
@@ -47,7 +47,7 @@
 
       $link = "post.php?id=" . $post_id;
 
-      $insert_query = mysqli_query($this->con, "INSERT INTO notifications VALUES ('','$user_to','$userLoggedIn', '$message', '$link', '$date_time', 'no' ,'no')");
+      $insert_query = mysqli_query($this->con, "INSERT INTO notifications VALUES (NULL,'$user_to','$userLoggedIn', '$message', '$link', '$date_time', 'no' ,'no')");
 
     }
 
