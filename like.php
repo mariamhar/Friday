@@ -24,6 +24,7 @@
 		require 'config/config.php';
 		include("includes/classes/User.php");
 		include("includes/classes/Post.php");
+		include("includes/classes/Notification.php");
 
 		// ...
 		if (isset($_SESSION['username'])) {
@@ -60,7 +61,7 @@
 
 			// Insert notification
 			if($user_liked != $userLoggedIn) {
-				$notification = new Notification($this->con, $userLoggedIn);
+				$notification = new Notification($con, $userLoggedIn);
 				$notification->insertNotification($post_id, $user_to, "like");
 			}
 		}
