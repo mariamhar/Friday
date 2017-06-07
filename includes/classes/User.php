@@ -13,9 +13,15 @@ class User {
 		return $this->user['username'];
 	}
 
+	public function getNumberOfFriendRequests() {
+		$username = $this->user['username'];
+		$query = mysqli_query($this->con, "SELECT * FROM friend_requests WHERE user_to = '$username'");
+		return mysqli_num_rows($query);
+	}
+
 	public function getNumPosts() {
 		$username = $this->user['username'];
-		$query = mysqli_query($this->con, "SELECT num_posts FROM users WHERE username='$username'");
+		$query = mysqli_query($this->con, "SELECT num_posts FROM users WHERE username = '$username'");
 		$row = mysqli_fetch_array($query);
 		return $row['num_posts'];
 	}
