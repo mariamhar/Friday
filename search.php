@@ -79,7 +79,7 @@
 			}
 
 			echo "<p id='grey'>Try searching for:</p>";
-			echo "<a href='search.php?q=" . $query . "&type=name'>Names</a>, <a href='search.php?q=" . $query . "&type=username'>Usernames</a>";
+			echo "<a href='search.php?q=" . $query . "&type=name'>Names</a>, <a href='search.php?q=" . $query . "&type=username'>Usernames</a><br/><br/><hr id='search_hr' />";
 
 			while($row = mysqli_fetch_array($usersReturnedQuery)) {
 				$user_obj = new User($con, $user['username']);
@@ -109,40 +109,27 @@
 
 				}
 
-				echo 	"
-								<div class='search_result'>
+				echo "<div class='search_result'>
+						<div class='searchPageFriendButtons'>
+							<form action='' method='POST'>
+								" . $button . "
+								<br>
+							</form>
+						</div>
 
-									<div>
 
-										<form action='' method='POST'>
-											" . $button . "
-											<br/>
-										</form>
+						<div class='result_profile_pic'>
+							<a href='" . $row['username'] ."'><img src='". $row['profile_pic'] ."' style='height: 100px;'></a>
+						</div>
 
-									</div>
+							<a href='" . $row['username'] ."'> " . $row['first_name'] . " " . $row['last_name'] . "
+							<p id='grey'> " . $row['username'] ."</p>
+							</a>
+							<br>
+							" . $mutual_friends ."<br>
 
-									<div>
-
-										<a href='" . $row['username'] . "'>
-											<img src='" . $row['profile_pic'] . "' style='height:100px;'>
-										</a>
-
-										<a href='" . $row['username'] . "'>
-											" . $row['first_name'] . " " . $row['last_name'] . "
-											<p id='grey'>" . $row['username'] .  "</p>
-										</a>
-
-										<br />
-
-										" . $mutual_friends . "
-
-										<br />
-
-									</div>
-
-								</div>
-								<hr />
-							";
+					</div>
+					<hr id='search_hr'>";
 
 			} // End while
 
