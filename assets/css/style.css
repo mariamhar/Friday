@@ -519,7 +519,7 @@ nav a:hover {
   margin: 8px 0px 0px 15%;
 }
 
-.search #search_input_text {
+.search #search_text_input {
   border: thin solid #e5e5e5;
   float: left;
   height: 23px;
