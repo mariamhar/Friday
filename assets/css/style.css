@@ -514,3 +514,34 @@ nav a:hover {
   font-size: 85%;
   margin: 0px;
 }
+
+.search {
+  margin: 8px 0px 0px 15%;
+}
+
+.search #search_input_text {
+  border: thin solid #e5e5e5;
+  float: left;
+  height: 23px;
+  outline: 0px;
+  width: 100px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.button_holder {
+  background-color: #f1f1f1;
+  border: thin solid #e5e5e5;
+  cursor: pointer;
+  float: left;
+  height: 23px;
+  text-align: center;
+  width: 50px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.button_holder img {
+  margin: 1px 0px 0px 0px;
+  height: 15px;
+}
