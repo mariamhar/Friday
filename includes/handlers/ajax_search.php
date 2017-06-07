@@ -30,7 +30,7 @@
 
 			if($row['username'] != $userLoggedIn) {
 
-				$mutual_friends = $user->getMutualFriends($row['username']) . "friends in common";
+				$mutual_friends = $user->getMutualFriends($row['username']) . " friends in common";
 
 			}
 			else {
