@@ -34,6 +34,10 @@ else {
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+	<!-- Favicons -->
+	<link rel="icon" href="https://notearise.com/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://notearise.com/favicon.ico" type="image/x-icon">
+
 </head>
 <body>
 

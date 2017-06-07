@@ -47,7 +47,7 @@ $(document).click(function(e) {
 	if(e.target.class != "dropdown_data_window") {
 
 		$(".dropdown_data_window").html("");
-		$(".dropdown_data_window").css({"padding": "0px", "height": "0px"});
+		$(".dropdown_data_window").css({"padding" : "0px", "height": "0px", "border" : "none"});
 
 	}
 
