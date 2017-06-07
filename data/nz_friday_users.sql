@@ -16,7 +16,10 @@ CREATE TABLE `users` (
   `location` varchar(256) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+
+
 SELECT * FROM users;
+SELECT * FROM users WHERE username = 'tieler_giles';
 TRUNCATE users;
 DROP TABLE IF EXISTS users;
 SELECT email FROM users WHERE email = 'thisisal@gmail.com';
@@ -62,3 +65,22 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `pass
 (13, 'Buck', 'Rodgers', 'buck_rodgers', 'brodgers@gmail.com', 'd41e98d1eafa6d6011d3a70f1a5b92f0', '2017-05-01', 'assets/images/profile_pics/defaults/head_emerald.png', 0, 0, 'no', ',alfonzo_logan,adolphus_nolan,', NULL),
 (14, 'Tucam', 'Sam', 'tucam_sam', 'tsam@gmail.com', 'd41e98d1eafa6d6011d3a70f1a5b92f0', '2017-05-01', 'assets/images/profile_pics/defaults/head_emerald.png', 0, 0, 'no', ',alfonzo_logan,adolphus_nolan,', NULL),
 (15, 'Denny', 'Crane', 'denny_crane', 'dc@cpslaw.com', 'd41e98d1eafa6d6011d3a70f1a5b92f0', '2017-05-05', 'assets/images/profile_pics/defaults/denny_crane.png', 296, 0, 'no', ',al_nolan,', NULL);
+
+
+/* 147 */
+
+SET @query = 'al_nolan';
+SET @name0 = 'al';
+SET @name1 = 'nolan';
+
+SELECT * FROM users;
+SELECT * FROM users WHERE username LIKE @query AND user_closed = 'no' LIMIT 8;
+SELECT * FROM users WHERE (first_name LIKE 'c%' AND last_name LIKE '%') AND user_closed = 'no' LIMIT 8;
+SELECT * FROM users WHERE (first_name LIKE @name0% AND last_name LIKE @name0%) AND user_closed = 'no' LIMIT 8;
+	}
+
+SELECT @user_to;
+SELECT @userLoggedIn;
+SELECT @message;
+SELECT @link;
+SELECT @date_time;
