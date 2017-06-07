@@ -428,7 +428,7 @@ nav a:hover {
 
 .resultDisplay {
   padding: 5px 5px 0px 5px;
-  height: 60px;
+  height: 70px;
   border-bottom: 1px solid #d3d3d3;
 }
 
@@ -544,4 +544,24 @@ nav a:hover {
 .button_holder img {
   margin: 1px 0px 0px 0px;
   height: 15px;
+}
+
+.search_results {
+  background-color: #ffffff;
+  border: 1px solid #dadada;
+  border-bottom: none;
+  border-top: none;
+  margin: 21px 0px 0px 0px;
+}
+
+.search_results_footer {
+  padding: 7px 4px 0px 4px;
+  height: 30px;
+  border: 1px solid #dadada;
+  background-color: #20aae5;
+  text-align: center;
+}
+
+.search_results_footer a {
+  color: #ffffff;
 }
