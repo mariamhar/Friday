@@ -30,5 +30,12 @@
 	</div>
 
 	<div class="main_column column" id="main_column">
-		<div class="posts_area"></div>
+		<div class="posts_area">
+			<?php
+			
+				$post = new Post($con, $userLoggedIn);
+				$post->getSinglePost($id);
+
+			?>
+		</div>
 	</div>
