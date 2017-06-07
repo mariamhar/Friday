@@ -29,14 +29,26 @@ SELECT @message;
 SELECT @link;
 SELECT @date_time;
 
+INSERT INTO notifications VALUES (NULL,@user_to,@userLoggedIn, @message, @link, @date_time, 'no' ,'no');
+INSERT INTO notifications VALUES (NULL,'vicky_jeudy','al_nolan', 'yo', 100909, NOW(), 'no' ,'no');
+
+
 SELECT * FROM posts WHERE id = 100922;
 SELECT * FROM posts;
 
 SELECT * FROM notifications;
 
-INSERT INTO notifications VALUES (NULL,@user_to,@userLoggedIn, @message, @link, @date_time, 'no' ,'no');
-INSERT INTO notifications VALUES (NULL,'vicky_jeudy','al_nolan', 'yo', 100909, NOW(), 'no' ,'no');
+UPDATE notifications SET opened = 'no';
+UPDATE notifications SET viewed = 'no';
 
+SET @userLoggedIn = 'al_nolan';
+SELECT @userLoggedIn;
+SELECT * FROM notifications;
+SELECT * FROM notifications WHERE viewed = 'no';
+SELECT * FROM notifications WHERE viewed = 'no' AND user_to = 'al_nolan';
+SELECT * FROM notifications WHERE viewed = 'no' AND user_to = 'al_nolan';
+SELECT * FROM notifications WHERE opened = 'no' AND user_to = 'al_nolan';
+UPDATE notifications SET viewed = 'yes' WHERE user_to = 'al_nolan';
 
 SELECT * FROM notifications;
 SELECT opened FROM notifications WHERE user_to = 'al_nolan' AND user_from = 'al_nolan' ORDER BY id DESC;

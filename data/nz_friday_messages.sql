@@ -13,7 +13,8 @@ SELECT * FROM messages WHERE viewed = 'no' AND user_to = 'vicky_jeudy';
 SELECT * FROM messages WHERE user_to = 'al_nolan';
 SELECT * FROM messages WHERE user_to = 'vicky_jeudy';
 
-
+UPDATE messages SET opened = 'no';
+UPDATE messages SET viewed = 'no';
 
 TRUNCATE messages;
 DROP TABLE IF EXISTS messages;

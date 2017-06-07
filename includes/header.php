@@ -83,7 +83,7 @@ else {
 
 					//
 					if ($num_notifications > 0) {
-						echo '<span class="notification_badge" id="unread_notifications">' . $num_notifications . '</span>';
+						echo '<span class="notification_badge" id="unread_notification">' . $num_notifications . '</span>';
 					}
 
 				?>

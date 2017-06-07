@@ -141,7 +141,7 @@ class Post {
 					$comments_check = mysqli_query($this->con, "SELECT * FROM comments WHERE post_id = '$id'");
 					$comments_check_num = mysqli_num_rows($comments_check);
 
-					//Timeframe
+					// Timeframe - Beginning
 					$date_time_now = date("Y-m-d H:i:s");
 					$start_date = new DateTime($date_time); //Time of post
 					$end_date = new DateTime($date_time_now); //Current time
@@ -204,6 +204,7 @@ class Post {
 							$time_message = $interval->s . " seconds ago";
 						}
 					}
+					// Timeframe - End
 
 					$str .= "<div class='status_post' onClick='javascript:toggle$id()'>
 								<div class='post_profile_pic'>
@@ -344,7 +345,7 @@ class Post {
 					$comments_check = mysqli_query($this->con, "SELECT * FROM comments WHERE post_id = '$id'");
 					$comments_check_num = mysqli_num_rows($comments_check);
 
-					//Timeframe
+					// Timeframe - Begin
 					$date_time_now = date("Y-m-d H:i:s");
 					$start_date = new DateTime($date_time); //Time of post
 					$end_date = new DateTime($date_time_now); //Current time
@@ -407,6 +408,7 @@ class Post {
 							$time_message = $interval->s . " seconds ago";
 						}
 					}
+					// Timeframe - End
 
 					$str .= "<div class='status_post' onClick='javascript:toggle$id()'>
 								<div class='post_profile_pic'>

@@ -21,6 +21,7 @@ $(document).ready(function() {
 
 });
 
+
 function getUsers(value, user) {
 	$.post("includes/handlers/ajax_friend_search.php", {query:value, userLoggedIn:user}, function(data) {
 		$(".results").html(data);
@@ -34,6 +35,7 @@ function getDropdownData(user, type) {
 		var pageName;
 
 		if(type == 'notification') {
+
 			pageName = "ajax_load_notifications.php";
 			$("span").remove("#unread_notification");
 		}

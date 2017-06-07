@@ -108,7 +108,7 @@
 				$date_added = $comment['date_added'];
 				$removed = $comment['removed'];
 
-				// Timeframe
+				// Timeframe - Begin
 				$date_time_now = date("Y-m-d H:i:s");
 				$start_date = new DateTime($date_added); //Time of post
 				$end_date = new DateTime($date_time_now); //Current time
@@ -171,8 +171,7 @@
 						$time_message = $interval->s . " seconds ago";
 					}
 				}
-
-				// END Timeframe
+				// Timeframe - End
 
 				$user_obj = new User($con, $posted_by);
 

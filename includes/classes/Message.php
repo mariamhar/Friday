@@ -71,7 +71,7 @@
       $row = mysqli_fetch_array($query);
       $sent_by = ($row['user_to'] == $userLoggedIn) ? "They said: " : "You said: ";
 
-      // Timeframe
+      // Timeframe - Begin
       $date_time_now = date("Y-m-d H:i:s");
       $start_date = new DateTime($row['date']); //Time of post
       $end_date = new DateTime($date_time_now); //Current time
@@ -134,7 +134,7 @@
           $time_message = $interval->s . " seconds ago";
         }
       }
-      // Timeframe
+      // Timeframe - End
 
       array_push($details_array, $sent_by);
       array_push($details_array, $row['body']);
