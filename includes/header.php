@@ -127,8 +127,8 @@ else {
 				?>
 
 			</a>
-			<a href="upload.php">
-				<i class="fa fa-upload fa-lg"></i>
+			<a href="settings.php">
+				<i class="fa fa-cog fa-lg"></i>
 			</a>
 			<!--//
 			<a href="#">

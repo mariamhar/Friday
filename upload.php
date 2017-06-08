@@ -28,7 +28,7 @@
   		$ImageType = @explode('/', $_FILES['image']['type']);
   		$type = $ImageType[1]; //file type
   	//Set Upload directory
-  		$uploaddir = '/Users/al/Sites'.'/www.notearise.com/friday/assets/images/profile_pics'; // yOU need to update $_SERVER['DOCUMENT_ROOT'] in the PHP.ini file because it currently lists the wrong server name as "/Library/WebServer/Documents/..."/
+  		$uploaddir = 'assets/images/profile_pics'; // yOU need to update $_SERVER['DOCUMENT_ROOT'] in the PHP.ini file because it currently lists the wrong server name as "/Library/WebServer/Documents/..."/
   	//Set File name
   		$file_temp_name = $profile_id.'_original.'.md5(time()).'n'.$type; //the temp file name
   		$fullpath = $uploaddir."/".$file_temp_name; // the temp file path
@@ -39,7 +39,7 @@
   		chmod($fullpath, 0777);
   		//Check for valid uplaod
   		if (!$move) {
-  			die ('File didnt upload');
+  			die ('Your file did not upload successfully.');
   		} else {
   			$imgSrc= "assets/images/profile_pics/".$file_name; // the image to display in crop area
   			$msg= "Upload Complete!";  	//message to page
