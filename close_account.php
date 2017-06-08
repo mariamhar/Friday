@@ -26,8 +26,8 @@
 	You can re-open your account at any time by simply logging in.<br/><br/>
 
 	<form action='close_account.php' method='POST'>
-			<input type='submit' name='close_account' value='Yes! Close it!'>
-			<input type='submit' name='cancel' value='No way!'>
+			<input type='submit' name='close_account' value='Yes! Close it!' class='settings_submit danger'>
+			<input type='submit' name='cancel' value='No way!' class='settings_submit info'>
 	</form>
 
 </div>
