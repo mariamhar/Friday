@@ -84,4 +84,9 @@
     $password_message = "";
   }
 
+  // Close Account
+  if(isset($_POST['close_account'])) {
+    header('Location: close_account.php');
+  }
+
 ?>

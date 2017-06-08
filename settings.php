@@ -1,15 +1,15 @@
 <?php
 
     //
-    include("includes/header.php");
-    include("includes/form_handlers/settings_handler.php");
+    include('includes/header.php');
+    include('includes/form_handlers/settings_handler.php');
 
     //
     // include("includes/settings.php");
 
 ?>
 
-<div class="main_column column">
+<div class='main_column column'>
 
   <h4>Account Settings</h4>
 
@@ -41,7 +41,7 @@
 
     <?php echo $message; ?>
 
-    <input type="submit" name="update_details" id="save_details" value="Update Details">
+    <input type='submit' name='update_details' id='save_details' value='Update Details'>
   </form>
 
   <br/>
@@ -54,14 +54,14 @@
 
     <?php echo $password_message; ?>
 
-    <input type="submit" name="update_password" id="update_password" value="Update Password">
+    <input type='submit' name='update_password' id='update_password' value='Update Password'>
   </form>
 
   <br/>
 
   <h4>Close Account</h4>
-  <form action="settings.php">
-    <input type="submit" name="close_account" id="close_account" value="Close Account">
+  <form action='settings.php' method='POST'>
+    <input type='submit' name='close_account' id='close_account' value='Close Account'>
   </form>
 
 </div>
