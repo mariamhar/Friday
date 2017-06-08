@@ -77,7 +77,7 @@ SELECT * FROM users;
 SELECT * FROM users WHERE username LIKE @query AND user_closed = 'no' LIMIT 8;
 SELECT * FROM users WHERE (first_name LIKE 'c%' AND last_name LIKE '%') AND user_closed = 'no' LIMIT 8;
 SELECT * FROM users WHERE (first_name LIKE @name0% AND last_name LIKE @name0%) AND user_closed = 'no' LIMIT 8;
-	}
+
 
 SELECT @user_to;
 SELECT @userLoggedIn;

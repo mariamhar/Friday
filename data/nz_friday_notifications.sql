@@ -11,6 +11,17 @@ CREATE TABLE IF NOT EXISTS `notifications` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+CREATE TABLE `notifications` (
+  `id` int(11) NOT NULL,
+  `user_to` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `user_from` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `message` text COLLATE utf8_unicode_ci,
+  `link` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `datetime` datetime DEFAULT NULL,
+  `opened` varchar(3) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `viewed` varchar(3) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 /* $insert_query = mysqli_query($this->con, "INSERT INTO notifications VALUES ('','$user_to','$userLoggedIn', '$message', '$link', '$date_time', 'no' ,'no')");
  * 
  */

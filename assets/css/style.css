@@ -568,7 +568,7 @@ nav a:hover {
 
 .search_result {
 	padding: 10px;
-    height: 100px;
+  height: 100px;
 }
 
 .searchPageFriendButtons {
@@ -577,14 +577,19 @@ nav a:hover {
 
 .searchPageFriendButtons input[type="submit"] {
 	border: none;
-    padding: 7px 12px;
-    border-radius: 5px;
-    color: #fff;
+  padding: 7px 12px;
+  border-radius: 5px;
+  color: #fff;
 }
 
 .result_profile_pic {
 	float: left;
-    margin-right: 10px;
+  margin-right: 10px;
+}
+
+.result_profile_pic img {
+  width: 100px;
+  height: 100px;
 }
 
 #search_hr {
