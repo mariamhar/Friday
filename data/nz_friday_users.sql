@@ -74,13 +74,26 @@ SET @name0 = 'al';
 SET @name1 = 'nolan';
 
 SELECT * FROM users;
+SELECT * FROM users WHERE username = 'al_nolan';
 SELECT * FROM users WHERE username LIKE @query AND user_closed = 'no' LIMIT 8;
 SELECT * FROM users WHERE (first_name LIKE 'c%' AND last_name LIKE '%') AND user_closed = 'no' LIMIT 8;
 SELECT * FROM users WHERE (first_name LIKE @name0% AND last_name LIKE @name0%) AND user_closed = 'no' LIMIT 8;
-
 
 SELECT @user_to;
 SELECT @userLoggedIn;
 SELECT @message;
 SELECT @link;
 SELECT @date_time;
+
+/*  */
+
+INSERT INTO users (id,first_name,last_name,username,email,password,signup_date,profile_pic,num_posts,num_likes,user_closed,friend_array,location) VALUES 
+(NULL,'Donald','Trump','rep_donald_trump','donaldtrump@gmail.com','d41e98d1eafa6d6011d3a70f1a5b92f0','2017-06-07','assets/images/profile_pics/rep_donald_trump.jpg','0','0','no',',',NULL),
+(NULL,'Mitch','McConnell','rep_mitch_mcconnell','mitchmcconnell@gmail.com','d41e98d1eafa6d6011d3a70f1a5b92f0','2017-06-07','assets/images/profile_pics/rep_mitch_mcconnell.jpg','0','0','no',',',NULL),
+(NULL,'Michael','Steele','rep_michael_steele','michaelsteele@gmail.com','d41e98d1eafa6d6011d3a70f1a5b92f0','2017-06-07','assets/images/profile_pics/rep_michael_steele.jpg','0','0','no',',',NULL),
+(NULL,'Sarah','Palin','rep_sarah_palin','sarahpalin@gmail.com','d41e98d1eafa6d6011d3a70f1a5b92f0','2017-06-07','assets/images/profile_pics/rep_sarah_palin.jpg','0','0','no',',',NULL),
+(NULL,'Ted','Cruz','rep_ted_cruz','tedcruz@gmail.com','d41e98d1eafa6d6011d3a70f1a5b92f0','2017-06-07','assets/images/profile_pics/rep_ted_cruz.jpg','0','0','no',',',NULL),
+(NULL,'Karl','Rove','rep_karl_rove','karlrove@gmail.com','d41e98d1eafa6d6011d3a70f1a5b92f0','2017-06-07','assets/images/profile_pics/rep_karl_rove.jpg','0','0','no',',',NULL),
+(NULL,'John','Boehner','rep_john_boehner','johnboehner@gmail.com','d41e98d1eafa6d6011d3a70f1a5b92f0','2017-06-07','assets/images/profile_pics/rep_john_boehner.jpg','0','0','no',',',NULL),
+(NULL,'Condoleezza','Rice','rep_condoleezza_rice','condoleezzarice@gmail.com','d41e98d1eafa6d6011d3a70f1a5b92f0','2017-06-07','assets/images/profile_pics/rep_condoleezza_rice.jpg','0','0','no',',',NULL),
+(NULL,'Carly','Fiorina','rep_carly_fiorina','carlyfiorina@gmail.com','d41e98d1eafa6d6011d3a70f1a5b92f0','2017-06-07','assets/images/profile_pics/rep_carly_fiorina.jpg','0','0','no',',',NULL)
