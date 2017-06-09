@@ -22,7 +22,12 @@
 
 				foreach($body_array as $key => $value) {
 					if(strpos($value, "www.youtube.com/watch?v=") !== false) {
-						$value = preg_replace("!watch\?v=!", "embed/", $value);
+
+						// In the case of a play list
+						$link = preg_split("!&!", $value);
+
+						// In the case of a standard link
+						$value = preg_replace("!watch\?v=!", "embed/", $link[0]);
 						$value = "<br/><iframe width=\'420\' height=\'315\' src=\'" . $value . "\'></iframe><br/>";
 						$body_array[$key] = $value;
 					}
