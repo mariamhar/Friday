@@ -21,6 +21,7 @@
 				$body_array = preg_split("/\s+/", $body);
 
 				foreach($body_array as $key => $value) {
+
 					if(strpos($value, "www.youtube.com/watch?v=") !== false) {
 
 						// In the case of a play list
@@ -30,7 +31,9 @@
 						$value = preg_replace("!watch\?v=!", "embed/", $link[0]);
 						$value = "<br/><iframe width=\'420\' height=\'315\' src=\'" . $value . "\'></iframe><br/>";
 						$body_array[$key] = $value;
+
 					}
+
 				}
 
 				$body = implode(" ", $body_array);
@@ -42,7 +45,9 @@
 
 				//If user is on own profile, user_to is 'none'
 				if($user_to == $added_by) {
+
 					$user_to = "none";
+
 				}
 
 				//insert post
@@ -105,8 +110,49 @@
 					&& strpos($no_punctuation, "width") === false
 					&& strpos($no_punctuation, "http") === false) {
 					$no_punctuation = preg_split("/[\s,]+/", $no_punctuation);
+
+					foreach($stopWords as $value) {
+
+						foreach($no_punctuation as $key => $value2) {
+
+							if(strtolower($value) == strtolower($value2)) {
+
+								$no_punctuation[$key] = "";
+
+							}
+
+						}
+
+					}
+
+					foreach ($no_punctuation as $value) {
+
+						$this->calculateTrend(ucfirst($value));
+
+					}
 				}
 
+			}
+
+		}
+
+		public function calculateTrend($term) {
+
+			if($term != '') {
+
+				$query = mysqli_query($this->con, "SELECT * FROM trends WHERE title = '$term'");
+
+				if(mysqli_num_rows($query) == 0) {
+
+					$insert_query = mysqli_query($this->con, "INSERT INTO trends (id,title,hits) VALUES (NULL, '$term', '1')");
+
+				}
+
+				else {
+
+					$insert_query = mysqli_query($this->con, "UPDATE trends SET hits = hits + 1 WHERE title = '$term'");
+
+				}
 			}
 		}
 

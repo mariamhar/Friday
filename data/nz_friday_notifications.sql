@@ -97,6 +97,7 @@ UPDATE notifications SET viewed = 'no';
 UPDATE notifications SET body = 'Hey, you...' WHERE user_to = 'al_nolan' AND user_from = 'vicky_jeudy';
 
 SELECT * FROM notifications;
+DESCRIBE notifications;
 INSERT INTO notifications (id,user_from,user_to,body,date,opened,viewed,deleted) VALUES (NULL, 'vicky_jeudy', 'al_nolan', 'Hey, stranger...',NOW(), 'no', 'no', 'no');
 INSERT INTO notifications (id,user_from,user_to,body,date,opened,viewed,deleted) VALUES (NULL, 'al_nolan', 'vicky_jeudy', 'Well, well, well...',NOW(), 'no', 'no', 'no');
 INSERT INTO notifications (id,user_from,user_to,body,date,opened,viewed,deleted) VALUES (NULL, 'vicky_jeudy', 'al_nolan', 'Want to try (us) again?',NOW(), 'no', 'no', 'no');
